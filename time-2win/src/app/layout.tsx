@@ -14,6 +14,7 @@ const helveticaNeue = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://time-2win.com'),
   title: 'TIME-2WIN - Lotterie de Montres de Luxe',
   description: 'Participez à nos compétitions exclusives pour gagner des montres de luxe, voitures de luxe et sacs de luxe authentiques. Transparence garantie avec Randomdraws.',
   keywords: 'lotterie, montres de luxe, voitures de luxe, sacs de luxe, compétition, Rolex, Hermes, Cartier',
