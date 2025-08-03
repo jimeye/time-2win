@@ -53,7 +53,7 @@ export default function EnterCompetitionSection() {
                                    {/* Image de la montre en haut */}
                      <div className="relative w-full mb-6">
                        <Image
-                         src="/images/enter-the-competition/rolex_1675_GMT_master_vintage_1-2.jpg"
+                         src="/images/enter-the-competition/rolex_1675_GMT_master_vintage_1-2.webp"
                          alt="Vintage Rolex GMT Master Pepsi"
                          width={800}
                          height={500}

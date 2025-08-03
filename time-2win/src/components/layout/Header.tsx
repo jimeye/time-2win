@@ -31,7 +31,7 @@ export default function Header() {
           <div className="flex justify-center">
             <Link href="/" className="flex items-center px-8 py-4 my-1">
               <Image
-                src="/header-logo-site-time-2-win.png"
+                src="/header-logo-site-time-2-win.webp"
                 alt="TIME-2WIN Logo"
                 width={312}
                 height={78}

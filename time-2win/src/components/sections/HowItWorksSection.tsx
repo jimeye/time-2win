@@ -15,25 +15,25 @@ const steps: Step[] = [
     id: 1,
     title: 'Select your tickets',
     description: 'Choose how many tickets you want and you\'re on the way to winning the luxury timepiece',
-    icon: '/images/select-you-tickets.png'
+    icon: '/images/select-you-tickets.webp'
   },
   {
     id: 2,
     title: 'Test your skills',
     description: 'Test your watch knowledge in our online game – built to sort the connoisseurs from the pretenders.',
-    icon: '/images/test-your-skills.png'
+    icon: '/images/test-your-skills.webp'
   },
   {
     id: 3,
     title: 'Buy your tickets',
     description: 'Pay securely to submit your entry. For a fair and transparent selection, we partner with Randomdraws, a trusted third-party to determine the winner.',
-    icon: '/images/buy-your-tickets​.png'
+    icon: '/images/buy-your-tickets.webp'
   },
   {
     id: 4,
     title: 'Win the competition',
     description: 'And that\'s it! You could walk away with a new £25,000 watch – for as little as £25.00.',
-    icon: '/images/win-the-competition.png'
+    icon: '/images/win-the-competition.webp'
   }
 ];
 

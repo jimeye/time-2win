@@ -26,7 +26,7 @@ export default function SecuritySection() {
             <div className="flex items-center space-x-4">
               <div className="w-36 h-36">
                 <img 
-                  src="/images/logo-randomdraws-com™-byTPAL.png"
+                  src="/images/logo-randomdraws-com.webp"
                   alt="Randomdraws.com™ by TPAL"
                   className="w-full h-full object-contain"
                 />

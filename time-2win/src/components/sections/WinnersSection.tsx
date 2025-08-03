@@ -19,35 +19,35 @@ const winners: Winner[] = [
     name: 'MIKAEL',
     product: 'Tudor BB Chronograph Pink',
     date: 'Apr. 3rd 2025',
-    image: '/images/winners/winner_mikael.jpg'
+    image: '/images/winners/winner_mikael.webp'
   },
   {
     id: 2,
     name: 'MATHIAS',
     product: 'Hermes Kelly Togo 32',
     date: 'Feb. 17th 2025',
-    image: '/images/winners/winner_mathias-1.jpg'
+    image: '/images/winners/winner_mathias-1.webp'
   },
   {
     id: 3,
     name: 'DAVID',
     product: 'Rolex Datejust 41 Grey',
     date: 'Jan. 1st 2025',
-    image: '/images/winners/winner_D_atlan.jpg'
+    image: '/images/winners/winner_D_atlan.webp'
   },
   {
     id: 4,
     name: 'SHIMON',
     product: 'Rolex Daytona Ceramic',
     date: 'Dec. 2nd 2024',
-    image: '/images/winners/winner_S.sebban.jpg'
+    image: '/images/winners/winner_S.sebban.webp'
   },
   {
     id: 5,
     name: 'DAVID',
     product: 'AP Royal Oak Desk Clock',
     date: 'Nov. 27th 2024',
-    image: '/images/winners/winner_D.karpel.jpg'
+    image: '/images/winners/winner_D.karpel.webp'
   }
 ];
 
