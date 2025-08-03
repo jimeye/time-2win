@@ -12,7 +12,7 @@ export default function Header() {
     <header className="bg-black shadow-sm">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Première ligne : Login à gauche, Logo centré, Panier à droite */}
-        <div className="flex justify-between items-center h-16 py-1">
+        <div className="flex justify-between items-center h-20 py-2">
                            {/* Hamburger menu et User à gauche */}
                  <div className="flex items-center space-x-4 flex-1 justify-start">
                    <button 
@@ -29,7 +29,7 @@ export default function Header() {
           
           {/* Logo centré */}
           <div className="flex justify-center">
-            <Link href="/" className="flex items-center px-8 py-4 my-1">
+            <Link href="/" className="flex items-center px-8 py-6 my-2">
               <Image
                 src="/header-logo-site-time-2-win.webp"
                 alt="TIME-2WIN Logo"
