@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    unoptimized: true
-  }
-}
+  experimental: {
+    appDir: true, // active le App Router
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
