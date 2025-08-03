@@ -24,6 +24,28 @@ export const metadata: Metadata = {
     description: 'Participez à nos compétitions exclusives pour gagner des montres de luxe authentiques.',
     type: 'website',
     locale: 'fr_FR',
+    url: 'https://time-2win.com',
+    siteName: 'TIME-2WIN',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'TIME-2WIN - Gagnez des montres de luxe authentiques',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'TIME-2WIN - Lotterie de Montres de Luxe',
+    description: 'Participez à nos compétitions exclusives pour gagner des montres de luxe authentiques.',
+    images: ['/opengraph-image'],
+    creator: '@time2win',
+  },
+  other: {
+    'og:image:width': '1200',
+    'og:image:height': '630',
+    'og:image:type': 'image/webp',
   },
 }
 
