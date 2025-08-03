@@ -40,8 +40,15 @@ export default function HeroSection() {
 
   return (
     <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden h-[33vh] md:h-[700px] hidden sm:block">
-      {/* Fond coloré temporaire */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      {/* Image de fond du hero */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero/hero-slider-time-2-win.webp"
+          alt="TIME-2WIN Hero Background"
+          fill
+          className="object-cover"
+          priority
+        />
         {/* Overlay pour améliorer la lisibilité du texte */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
       </div>
