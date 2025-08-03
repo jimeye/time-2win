@@ -39,14 +39,14 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden h-[33vh] md:h-[700px] hidden sm:block">
+    <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden h-[33vh] md:h-[600px] hidden sm:block">
       {/* Image de fond du hero */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero/hero-slider-time-2-win.webp"
           alt="TIME-2WIN Hero Background"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
         {/* Overlay pour améliorer la lisibilité du texte */}
