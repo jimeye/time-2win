@@ -100,10 +100,7 @@ export default function EnterCompetitionSection() {
                        </h2>
                      </div>
        
-                     {/* Ligne de séparation */}
-                     <div className="border-t border-gray-300 mb-6 hidden sm:block"></div>
-       
-                                          {/* Prix et valeur - côte à côte */}
+                     {/* Prix et valeur - côte à côte */}
                      <div className="flex flex-col sm:flex-row justify-between items-center mb-8 px-5">
                        <div className="text-center mb-4 sm:mb-0">
                          <div className="text-xl font-bold text-black">20,00 €</div>

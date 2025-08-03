@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-gray-300 mt-4 pt-4 text-center text-black text-sm">
+        <div className="mt-4 pt-4 text-center text-black text-sm">
           <p className="text-black">Time2Win Ltd is registered at 7 Bell Yard London WC2A 2JR UK. © 2025 time-2win.com</p>
           <p className="mt-2 text-black">Website design by <a href="tel:+330608251223" className="!text-black no-underline hover:text-gray-600 font-roboto font-light text-[16px] leading-[26px]" style={{color: 'black !important'}}>JOSEPH-STUDIO.COM</a></p>
           <p className="mt-1 text-black">Tous droits réservés</p>
