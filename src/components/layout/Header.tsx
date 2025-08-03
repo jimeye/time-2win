@@ -9,7 +9,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-black shadow-sm border-b border-gray-800">
+    <header className="bg-black shadow-sm">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Première ligne : Login à gauche, Logo centré, Panier à droite */}
         <div className="flex justify-between items-center h-16 py-1">
@@ -55,7 +55,7 @@ export default function Header() {
         </div>
 
         {/* Deuxième ligne : Navigation sous le logo */}
-        <div className="flex justify-center py-2 border-t border-gray-800">
+        <div className="flex justify-center py-2">
           <nav className="flex space-x-8">
             <Link 
               href="#competition" 
