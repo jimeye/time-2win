@@ -39,7 +39,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[85vh]">
+    <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[65vh] xl:h-[70vh]">
       {/* Image de fond du hero */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -55,7 +55,7 @@ export default function HeroSection() {
       </div>
       
       {/* Contenu principal centré verticalement */}
-      <div className="relative z-10 flex flex-col justify-start items-center h-full px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-24 lg:pt-28">
+      <div className="relative z-10 flex flex-col justify-start items-center h-full px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 md:pt-20 lg:pt-24">
         <div className="text-center max-w-4xl mx-auto">
           {/* Titre principal */}
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-thin font-montserrat text-white mb-2 sm:mb-4 leading-tight">
