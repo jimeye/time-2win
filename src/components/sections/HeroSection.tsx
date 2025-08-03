@@ -39,25 +39,26 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden h-[33vh] md:h-[600px] hidden sm:block">
+    <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[85vh]">
       {/* Image de fond du hero */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero/hero-slider-time-2-win.webp"
           alt="TIME-2WIN Hero Background"
           fill
-          className="object-cover object-center"
+          className="object-cover object-center sm:object-top md:object-center lg:object-center"
           priority
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
         {/* Overlay pour améliorer la lisibilité du texte */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/50 sm:from-black/60 sm:via-black/40 sm:to-black/60"></div>
       </div>
       
       {/* Contenu principal centré verticalement */}
-      <div className="relative z-10 flex flex-col justify-start items-center h-full px-4 sm:px-6 lg:px-8 pt-20">
+      <div className="relative z-10 flex flex-col justify-start items-center h-full px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-24 lg:pt-28">
         <div className="text-center max-w-4xl mx-auto">
           {/* Titre principal */}
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-thin font-montserrat text-white mb-2 sm:mb-4 leading-tight">
+          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-thin font-montserrat text-white mb-2 sm:mb-4 leading-tight">
             100% OF WINNERS TRIED THEIR SKILLS!
           </h1>
           
@@ -76,8 +77,8 @@ export default function HeroSection() {
       </div>
       
       {/* Texte en bas de l'image */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 bg-black/80 text-white py-4 px-4 sm:px-6 lg:px-8 flex items-center justify-center text-center">
-        <p className="text-center text-base sm:text-lg md:text-[21px] font-thin font-montserrat text-white leading-tight max-w-4xl mx-auto md:whitespace-nowrap flex justify-center items-center">
+      <div className="absolute bottom-0 left-0 right-0 z-20 bg-black/80 text-white py-3 sm:py-4 px-4 sm:px-6 lg:px-8 flex items-center justify-center text-center">
+        <p className="text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-[21px] font-thin font-montserrat text-white leading-tight max-w-4xl mx-auto md:whitespace-nowrap flex justify-center items-center">
           Exclusive, Collectible and Valuable luxury pieces - Expertized and Available to the competition winner
         </p>
       </div>
