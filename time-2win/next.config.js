@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // App Router est maintenant activé par défaut dans Next.js 13+
+  experimental: {
+    appDir: true, // active le App Router
+  },
 };
 
 module.exports = nextConfig;
