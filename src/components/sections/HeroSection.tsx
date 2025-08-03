@@ -39,7 +39,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[65vh] xl:h-[70vh] hidden sm:block">
+    <section className="relative text-white overflow-hidden h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[65vh] xl:h-[70vh] hidden sm:block">
       {/* Image de fond du hero */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -50,8 +50,6 @@ export default function HeroSection() {
           priority
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
-        {/* Overlay pour améliorer la lisibilité du texte */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/50 sm:from-black/60 sm:via-black/40 sm:to-black/60"></div>
       </div>
       
       {/* Contenu principal centré verticalement */}
