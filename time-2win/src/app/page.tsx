@@ -1,23 +1,19 @@
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import HeroSection from '@/components/sections/HeroSection';
-import CommunitySection from '@/components/sections/CommunitySection';
-import EnterCompetitionSection from '@/components/sections/EnterCompetitionSection';
-import WinnersSection from '@/components/sections/WinnersSection';
-import SecuritySection from '@/components/sections/SecuritySection';
-import HowItWorksSection from '@/components/sections/HowItWorksSection';
+'use client';
+
+import { useEffect } from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    // Redirection vers localhost:3001/index
+    window.location.href = 'http://localhost:3001/index';
+  }, []);
+
   return (
-    <main className="min-h-screen">
-      <Header />
-      <CommunitySection />
-      <HeroSection />
-      <EnterCompetitionSection />
-      <WinnersSection />
-      <SecuritySection />
-      <HowItWorksSection />
-      <Footer />
-    </main>
+    <div className="min-h-screen bg-black text-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Redirection...</h1>
+        <p className="text-lg">Vers http://localhost:3001/index</p>
+      </div>
+    </div>
   );
 }
