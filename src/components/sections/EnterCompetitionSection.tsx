@@ -95,7 +95,7 @@ export default function EnterCompetitionSection() {
 
                                    {/* Titre de la compétition */}
                      <div className="text-center mb-6 px-5">
-                       <h2 className="text-xl sm:text-2xl md:text-3xl font-normal font-montserrat text-black">
+                       <h2 className="text-2xl sm:text-2xl md:text-3xl font-normal font-montserrat text-black">
                          Win the Vintage Rolex GMT Master Pepsi Comp
                        </h2>
                      </div>
