@@ -9,7 +9,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-black shadow-sm">
+    <header className="bg-black shadow-sm pt-4 sm:pt-6 md:pt-8">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Première ligne : Login à gauche, Logo centré, Panier à droite */}
         <div className="flex justify-between items-center h-20 py-2">
