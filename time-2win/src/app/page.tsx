@@ -7,6 +7,7 @@ import WinnersSection from '@/components/sections/WinnersSection';
 import SecuritySection from '@/components/sections/SecuritySection';
 import HowItWorksSection from '@/components/sections/HowItWorksSection';
 
+// Page d'accueil TIME-2WIN - Test Vercel deployment
 export default function Home() {
   return (
     <main className="min-h-screen">
