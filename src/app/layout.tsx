@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: 'TIME-2WIN',
     images: [
       {
-        url: '/og-image.webp',
+        url: 'https://time-2win.com/og-image.webp',
         width: 1200,
         height: 630,
         alt: 'TIME-2WIN - Gagnez des montres de luxe authentiques',
@@ -39,13 +39,15 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'TIME-2WIN - Lotterie de Montres de Luxe',
     description: 'Participez à nos compétitions exclusives pour gagner des montres de luxe authentiques.',
-    images: ['/og-image.webp'],
+    images: ['https://time-2win.com/og-image.webp'],
     creator: '@time2win',
   },
   other: {
+    'og:image': 'https://time-2win.com/og-image.webp',
     'og:image:width': '1200',
     'og:image:height': '630',
     'og:image:type': 'image/webp',
+    'og:image:alt': 'TIME-2WIN - Gagnez des montres de luxe authentiques',
   },
 }
 

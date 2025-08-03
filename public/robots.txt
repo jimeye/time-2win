@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Allow access to OpenGraph image
+Allow: /og-image.webp
+
+Sitemap: https://time-2win.com/sitemap.xml 
