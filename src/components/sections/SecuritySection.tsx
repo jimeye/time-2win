@@ -2,7 +2,7 @@
 
 export default function SecuritySection() {
   return (
-    <section className="bg-white py-0">
+    <section className="bg-white py-8 sm:py-0">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-normal font-montserrat text-black">

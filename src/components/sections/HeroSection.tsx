@@ -39,7 +39,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative text-white overflow-hidden h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[65vh] xl:h-[70vh] hidden sm:block">
+    <section className="relative text-white overflow-hidden h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[65vh] xl:h-[70vh]">
       {/* Image de fond du hero */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -71,10 +71,10 @@ export default function HeroSection() {
           </div>
           
           {/* Bouton d'action pour mobile */}
-          <div className="sm:hidden">
+          <div className="sm:hidden mt-40">
             <Link 
               href="#competition"
-              className="inline-flex items-center px-4 py-2 bg-[#bfa468] text-white text-sm font-medium hover:bg-[#a8945a] transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-3 py-1.5 bg-[#bfa468] text-white text-xs font-medium hover:bg-[#a8945a] transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               ENTER THE COMPETITION
             </Link>

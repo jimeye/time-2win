@@ -13,9 +13,16 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <CommunitySection />
-      <HeroSection />
+      {/* Hero Section - Desktop seulement en haut, Mobile après Winners */}
+      <div className="hidden sm:block">
+        <HeroSection />
+      </div>
       <EnterCompetitionSection />
       <WinnersSection />
+      {/* Hero Section - Mobile seulement après Winners */}
+      <div className="block sm:hidden">
+        <HeroSection />
+      </div>
       <SecuritySection />
       <HowItWorksSection />
       <Footer />
