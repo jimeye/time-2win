@@ -1,8 +1,7 @@
 'use client';
 
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Winner {
@@ -77,11 +76,11 @@ export default function WinnersSection() {
     });
   };
 
-  // Défilement automatique tous les 5 secondes (mobile et desktop)
+  // Défilement automatique tous les 8 secondes (mobile et desktop)
   useEffect(() => {
     const interval = setInterval(() => {
       nextWinner();
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, [windowWidth]);
@@ -89,114 +88,106 @@ export default function WinnersSection() {
   const isMobile = windowWidth > 0 && windowWidth < 768;
 
   return (
-    <section id="winners" className="bg-white py-4">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6">
-          <h2 className="text-[32px] font-medium font-montserrat text-black leading-[32px] mb-2">
+    <section className="bg-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Titre de la section */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-thin font-montserrat text-black mb-4">
             When dreams come true
           </h2>
         </div>
 
-        {/* Version Mobile - Carousel seulement */}
+        {/* Carrousel Mobile */}
         {isMobile && (
           <>
             <div className="relative mb-12">
               <div className="text-center">
-                <div className="bg-gray-900 rounded-full shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4">
+                <div className="bg-gray-900 rounded-full shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4 border-2 border-[#bfa468]">
                   <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                     <Image
                       src={winners[currentWinnerIndex].image}
                       alt={`Winner ${winners[currentWinnerIndex].name}`}
                       width={200}
                       height={200}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-all duration-500 ease-in-out"
                     />
                   </div>
                 </div>
-                
-                <div className="text-center">
-                  <div className="text-sm font-light text-black mb-1">
-                    Winner of
-                  </div>
-                  <h3 className="text-xl font-semibold font-montserrat text-black leading-[29px] mb-2">
-                    {winners[currentWinnerIndex].product}
-                  </h3>
-                  <div className="text-sm font-light text-black mb-2">
-                    {winners[currentWinnerIndex].date}
-                  </div>
-                  <div className="w-32 h-px bg-[#bfa468] mx-auto mb-2"></div>
-                  <div className="text-2xl font-normal font-montserrat text-black leading-[29px]">
-                    {winners[currentWinnerIndex].name}
-                  </div>
-                </div>
+                <h3 className="text-xl font-medium text-black mb-2">
+                  {winners[currentWinnerIndex].name}
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  {winners[currentWinnerIndex].product}
+                </p>
+                <p className="text-sm text-gray-500">
+                  {winners[currentWinnerIndex].date}
+                </p>
               </div>
 
-              {/* Flèches minimalistes */}
-              <button 
+              {/* Boutons de navigation */}
+              <button
                 onClick={prevWinner}
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 text-[#bfa468] hover:text-[#a8945a] transition-colors z-10"
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 opacity-50"
+                aria-label="Gagnant précédent"
               >
-                <ChevronLeft size={28} />
+                <ChevronLeft className="w-6 h-6 text-gray-600" />
               </button>
-              
-              <button 
+              <button
                 onClick={nextWinner}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-[#bfa468] hover:text-[#a8945a] transition-colors z-10"
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 opacity-50"
+                aria-label="Gagnant suivant"
               >
-                <ChevronRight size={28} />
+                <ChevronRight className="w-6 h-6 text-gray-600" />
               </button>
+
+
             </div>
 
-            {/* Bouton pour voir tous les gagnants sur mobile */}
-            <div className="text-center mb-8">
-              <button 
+            {/* Bouton pour voir tous les gagnants */}
+            <div className="text-center">
+              <button
                 onClick={() => setShowAllWinners(!showAllWinners)}
-                className="bg-[#bfa468] text-white px-8 py-2 text-lg font-normal hover:bg-[#a8945a] transition-all duration-300 transform hover:scale-105 inline-block shadow-lg"
+                className="bg-[#bfa468] text-white px-8 py-2 hover:bg-[#a8945a] transition-colors duration-300 font-medium border-2 border-black"
               >
-                {showAllWinners ? 'HIDE WINNERS' : 'VIEW ALL WINNERS'}
+                {showAllWinners ? 'HIDE ALL WINNERS' : 'VIEW ALL WINNERS'}
               </button>
             </div>
 
-            {/* Tous les gagnants (mobile seulement quand cliqué) */}
+            {/* Affichage de tous les gagnants */}
             {showAllWinners && (
-              <div className="grid grid-cols-1 gap-8 mb-12">
-                {winners.map((winner) => (
-                  <div key={winner.id} className="text-center">
-                    <div className="bg-gray-900 rounded-full shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4">
-                      <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                        <Image
-                          src={winner.image}
-                          alt={`Winner ${winner.name}`}
-                          width={200}
-                          height={200}
-                          className="w-full h-full object-cover"
-                        />
+              <div className="mt-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  {winners.map((winner) => (
+                    <div key={winner.id} className="text-center">
+                      <div className="bg-gray-900 rounded-full shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4 border-2 border-[#bfa468]">
+                        <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                          <Image
+                            src={winner.image}
+                            alt={`Winner ${winner.name}`}
+                            width={200}
+                            height={200}
+                            className="w-full h-full object-cover transition-all duration-500 ease-in-out"
+                          />
+                        </div>
                       </div>
-                    </div>
-                    
-                    <div className="text-center">
-                      <div className="text-sm font-light text-black mb-1">
-                        Winner of
-                      </div>
-                      <h3 className="text-xl font-semibold font-montserrat text-black leading-[29px] mb-2">
-                        {winner.product}
-                      </h3>
-                      <div className="text-sm font-light text-black mb-2">
-                        {winner.date}
-                      </div>
-                      <div className="w-32 h-px bg-[#bfa468] mx-auto mb-2"></div>
-                      <div className="text-2xl font-normal font-montserrat text-black leading-[29px]">
+                      <h3 className="text-xl font-medium text-black mb-2">
                         {winner.name}
-                      </div>
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        {winner.product}
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        {winner.date}
+                      </p>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             )}
           </>
         )}
 
-        {/* Version Desktop - Carousel avec 3 gagnants */}
+        {/* Carrousel Desktop */}
         {windowWidth >= 768 && (
           <>
             <div className="relative mb-12">
@@ -210,98 +201,89 @@ export default function WinnersSection() {
                   }
                   return displayWinners.map((winner, index) => (
                     <div key={`${winner.id}-${index}`} className="text-center">
-                      <div className="bg-gray-900 rounded-full shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4">
+                      <div className="bg-gray-900 rounded-full shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4 border-2 border-[#bfa468]">
                         <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                           <Image
                             src={winner.image}
                             alt={`Winner ${winner.name}`}
                             width={200}
                             height={200}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-all duration-500 ease-in-out"
                           />
                         </div>
                       </div>
-                      
-                      <div className="text-center">
-                        <div className="text-sm font-light text-black mb-1">
-                          Winner of
-                        </div>
-                        <h3 className="text-xl font-semibold font-montserrat text-black leading-[29px] mb-2">
-                          {winner.product}
-                        </h3>
-                        <div className="text-sm font-light text-black mb-2">
-                          {winner.date}
-                        </div>
-                        <div className="w-32 h-px bg-[#bfa468] mx-auto mb-2"></div>
-                        <div className="text-2xl font-normal font-montserrat text-black leading-[29px]">
-                          {winner.name}
-                        </div>
-                      </div>
+                      <h3 className="text-xl font-medium text-black mb-2">
+                        {winner.name}
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        {winner.product}
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        {winner.date}
+                      </p>
                     </div>
                   ));
                 })()}
               </div>
 
-              {/* Flèches minimalistes */}
-              <button 
+              {/* Boutons de navigation */}
+              <button
                 onClick={prevWinner}
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 text-[#bfa468] hover:text-[#a8945a] transition-colors z-10"
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 opacity-50"
+                aria-label="Gagnants précédents"
               >
-                <ChevronLeft size={28} />
+                <ChevronLeft className="w-6 h-6 text-gray-600" />
               </button>
-              
-              <button 
+              <button
                 onClick={nextWinner}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-[#bfa468] hover:text-[#a8945a] transition-colors z-10"
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 opacity-50"
+                aria-label="Gagnants suivants"
               >
-                <ChevronRight size={28} />
+                <ChevronRight className="w-6 h-6 text-gray-600" />
               </button>
+
+
             </div>
 
-            {/* Bouton pour voir tous les gagnants sur desktop */}
-            <div className="text-center mb-8">
-              <button 
+            {/* Bouton pour voir tous les gagnants */}
+            <div className="text-center">
+              <button
                 onClick={() => setShowAllWinners(!showAllWinners)}
-                className="bg-[#bfa468] text-white px-8 py-2 text-lg font-normal hover:bg-[#a8945a] transition-all duration-300 transform hover:scale-105 inline-block shadow-lg"
+                className="bg-[#bfa468] text-white px-8 py-2 hover:bg-[#a8945a] transition-colors duration-300 font-medium border-2 border-black"
               >
-                {showAllWinners ? 'HIDE WINNERS' : 'VIEW ALL WINNERS'}
+                {showAllWinners ? 'HIDE ALL WINNERS' : 'VIEW ALL WINNERS'}
               </button>
             </div>
 
-            {/* Tous les gagnants (desktop seulement quand cliqué) */}
+            {/* Affichage de tous les gagnants */}
             {showAllWinners && (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-12">
-                {winners.map((winner) => (
-                  <div key={winner.id} className="text-center">
-                    <div className="bg-gray-900 rounded-full shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4">
-                      <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                        <Image
-                          src={winner.image}
-                          alt={`Winner ${winner.name}`}
-                          width={200}
-                          height={200}
-                          className="w-full h-full object-cover"
-                        />
+              <div className="mt-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {winners.map((winner) => (
+                    <div key={winner.id} className="text-center">
+                      <div className="bg-gray-900 rounded-full shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4 border-2 border-[#bfa468]">
+                        <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                          <Image
+                            src={winner.image}
+                            alt={`Winner ${winner.name}`}
+                            width={200}
+                            height={200}
+                            className="w-full h-full object-cover transition-all duration-500 ease-in-out"
+                          />
+                        </div>
                       </div>
-                    </div>
-                    
-                    <div className="text-center">
-                      <div className="text-sm font-light text-black mb-1">
-                        Winner of
-                      </div>
-                      <h3 className="text-xl font-semibold font-montserrat text-black leading-[29px] mb-2">
-                        {winner.product}
-                      </h3>
-                      <div className="text-sm font-light text-black mb-2">
-                        {winner.date}
-                      </div>
-                      <div className="w-32 h-px bg-[#bfa468] mx-auto mb-2"></div>
-                      <div className="text-2xl font-normal font-montserrat text-black leading-[29px]">
+                      <h3 className="text-xl font-medium text-black mb-2">
                         {winner.name}
-                      </div>
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        {winner.product}
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        {winner.date}
+                      </p>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             )}
           </>

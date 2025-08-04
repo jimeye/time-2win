@@ -41,7 +41,7 @@ export default function EnterCompetitionSection() {
           <div className="max-w-2xl mx-auto">
             
                                {/* Section blanche avec bordure dorée - tout inclus */}
-                   <div className="bg-white border-2 border-yellow-500 pb-4 font-helvetica-neue">
+                   <div className="bg-white border-2 border-[#bfa468] pb-4 font-helvetica-neue">
               
                                    {/* Titre "The Competition" */}
                      <div className="text-center mb-8 hidden">
@@ -116,7 +116,7 @@ export default function EnterCompetitionSection() {
               <div className="text-center">
                 <Link 
                   href="/competition"
-                  className="bg-[#bfa468] text-white px-8 py-2 text-lg font-normal hover:bg-[#a8945a] transition-all duration-300 transform hover:scale-105 inline-block shadow-lg"
+                  className="bg-[#bfa468] text-white px-8 py-2 text-lg font-normal hover:bg-[#a8945a] transition-all duration-300 transform hover:scale-105 inline-block shadow-lg border-2 border-black"
                 >
                   ENTER THE COMPETITION
                 </Link>

@@ -60,7 +60,15 @@ export default function HeroSection() {
             100% OF WINNERS TRIED THEIR SKILLS!
           </h1>
           
-
+          {/* Bouton d'action pour desktop */}
+          <div className="hidden sm:block mt-56">
+            <Link 
+              href="#competition"
+              className="inline-flex items-center px-8 py-2 bg-[#bfa468] text-white text-lg font-normal hover:bg-[#a8945a] transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-black"
+            >
+              ENTER THE COMPETITION
+            </Link>
+          </div>
           
           {/* Bouton d'action pour mobile */}
           <div className="sm:hidden">
