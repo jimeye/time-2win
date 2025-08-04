@@ -61,10 +61,10 @@ export default function HeroSection() {
           </h1>
           
           {/* Bouton d'action pour desktop */}
-          <div className="hidden sm:block mt-56">
+          <div className="hidden sm:block mt-72">
             <Link 
               href="#competition"
-              className="inline-flex items-center px-8 py-2 bg-[#bfa468] text-white text-lg font-normal hover:bg-[#a8945a] transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-black"
+              className="px-8 py-2 bg-[#bfa468] text-white font-medium hover:bg-[#a8945a] transition-colors duration-300"
             >
               ENTER THE COMPETITION
             </Link>

@@ -116,7 +116,7 @@ export default function EnterCompetitionSection() {
               <div className="text-center">
                 <Link 
                   href="/competition"
-                  className="bg-[#bfa468] text-white px-8 py-2 text-lg font-normal hover:bg-[#a8945a] transition-all duration-300 transform hover:scale-105 inline-block shadow-lg border-2 border-black"
+                  className="bg-[#bfa468] text-white px-8 py-2 font-medium hover:bg-[#a8945a] transition-colors duration-300"
                 >
                   ENTER THE COMPETITION
                 </Link>

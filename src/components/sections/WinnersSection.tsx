@@ -147,7 +147,7 @@ export default function WinnersSection() {
             <div className="text-center">
               <button
                 onClick={() => setShowAllWinners(!showAllWinners)}
-                className="bg-[#bfa468] text-white px-8 py-2 hover:bg-[#a8945a] transition-colors duration-300 font-medium border-2 border-black"
+                className="bg-[#bfa468] text-white px-8 py-2 hover:bg-[#a8945a] transition-colors duration-300 font-medium"
               >
                 {showAllWinners ? 'HIDE ALL WINNERS' : 'VIEW ALL WINNERS'}
               </button>
@@ -249,7 +249,7 @@ export default function WinnersSection() {
             <div className="text-center">
               <button
                 onClick={() => setShowAllWinners(!showAllWinners)}
-                className="bg-[#bfa468] text-white px-8 py-2 hover:bg-[#a8945a] transition-colors duration-300 font-medium border-2 border-black"
+                className="bg-[#bfa468] text-white px-8 py-2 hover:bg-[#a8945a] transition-colors duration-300 font-medium"
               >
                 {showAllWinners ? 'HIDE ALL WINNERS' : 'VIEW ALL WINNERS'}
               </button>
